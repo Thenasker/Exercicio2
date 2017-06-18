@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1497770742 source:c:\users\thenasker\desktop\exercicio2\main.cpp
+	<stdlib.h>
+	<stdio.h>
+	<string>
+	<windows.h>
+	<fstream>
+	<ctime>
+	<sstream>
+	<dirent.h>
+	<vector>
+	<iostream>
+	<algorithm>
+	<map>
+	<cmath>
+	<bitset>
+
+1497659252 c:\users\thenasker\desktop\exercicio2\include\imagem.h
+	<iostream>
+	<string>
+	<windows.h>
+	<fstream>
+	<ctime>
+	<sstream>
+
+1497659299 source:c:\users\thenasker\desktop\exercicio2\src\imagem.cpp
+	"Imagem.h"
+	<iostream>
+	<string>
+	<fstream>
+
