@@ -29,3 +29,19 @@
 	<string>
 	<fstream>
 
+1497770742 source:c:\users\thenasker\desktop\unifacs\lp\av2\exercicio2\main.cpp
+	<stdlib.h>
+	<stdio.h>
+	<string>
+	<windows.h>
+	<fstream>
+	<ctime>
+	<sstream>
+	<dirent.h>
+	<vector>
+	<iostream>
+	<algorithm>
+	<map>
+	<cmath>
+	<bitset>
+

@@ -36,6 +36,7 @@
 
 using namespace std;
 
+//Struct que armazena toda a informaçao que compoe a imagem
 struct PPM
 {
   char magicNum[3];
@@ -82,7 +83,7 @@ bool finalizar(){
 
 }
 
-
+// Funçao para listar os elementos de um diretorio
 void list_dir(string dir){
 
     DIR *directorio;
@@ -102,6 +103,8 @@ void list_dir(string dir){
     closedir(directorio);
 }
 
+//funçao que cria uma matriz de tuplas RGB e escreve elas num arquivo na disposiçao dos arquivos P6
+//Primeiro escreve a cabeceira no arquivo
 void criarPaleta(int x, int y){
 
     unsigned char color[3];
@@ -132,6 +135,7 @@ void criarPaleta(int x, int y){
 
 }
 
+//funçao que recebe um struct PPM e gera uma imagem igual só que cada cor de cada pixel é 255-n para obter a cor inversa
 void criarInversa(PPM &ppm){
 
     unsigned char color[3];
@@ -159,6 +163,8 @@ void criarInversa(PPM &ppm){
 
 }
 
+//funçao de obtem a informaçao de uma imagem e armazena ela num struct PPM
+//Primero le a cabezeira, depois inicializa o array de unsigned char de pixeis em relaçao ao tamanho da imagem. Por ultimo le cada lina e vaiu armazenado os valores no array "pixels"
 void lerImagem(PPM &ppmImagem, string dir){
 
     FILE *fr = fopen(dir.c_str(), "rb");
@@ -183,6 +189,7 @@ void lerImagem(PPM &ppmImagem, string dir){
     fread(ppmImagem.pixels, 3*ppmImagem.dimx, ppmImagem.dimy, fr);
 }
 
+// funçao que chama as funçoes necessarias para invertir as cores de uma imagem
 void invertirCores(string dir){
 
     PPM ppmImagem;
@@ -195,6 +202,8 @@ void invertirCores(string dir){
 
 }
 
+//funçao que le uma imagem, armazena ela e apois de converter cada valor do array pixels em hexadecimal, armazzena eles em um vetor da clase Vector
+//com esse vetor usamos um iterator para contar as repetiçoes das cores e mostramos a que mais se repeter
 void contarCores(string dir){
 
     PPM ppmImagem;
@@ -244,6 +253,9 @@ void contarCores(string dir){
 
 }
 
+//essa funçao adiciona a mensagem as palavras de abertura e fechadura "BACON" e "FRITO" e converte cada carater em um objeto bitset<8>
+//depois, cada objeto bitset<8> é copiado bit a bit no ultimo bit de cada cor azul de cada pixel
+//Por ultimo esses pixeis sao escritos num arquivo que cria uma imagem.
 bool encriptar(string msg, string dir){
 
 
@@ -307,6 +319,8 @@ bool encriptar(string msg, string dir){
     return true;
 }
 
+//A funçao primeiro procura a palavra de abertura para saber se a iumagem contem uma mensagem lendo cada ultimo bit de cada cor azul.
+//Depois continua lendo ate achar a palavra de fechadura e mostra o mensagem em forma de texto.
 bool desencriptar(string dir){
 
     PPM ppmImagem;
@@ -348,7 +362,7 @@ bool desencriptar(string dir){
             msg[cont2] =(int)(byte.to_ulong());
             cont = -1;
 
-            //MUITO FEIO
+            //MUITO FEIO :(
             if(msg[cont2]=='O' && msg[cont2-1]=='T' && msg[cont2-2]=='I' && msg[cont2-3]=='R' && msg[cont2-4]=='F') k=ppmImagem.dimx*ppmImagem.dimy*3;
 
             cont2++;
@@ -365,6 +379,7 @@ bool desencriptar(string dir){
     return true;
 }
 
+//Funçoes que gerenciam as funcionalidades do programa
 bool opcao1(){
 
     int x=0,y=0;
@@ -449,7 +464,6 @@ bool opcao3(){
 
 }
 
-
 bool opcao4(){
 
 
@@ -493,7 +507,6 @@ bool opcao4(){
     return finalizar();
 
 }
-
 
 bool opcao5(){
 
