@@ -406,18 +406,11 @@ bool opcao2(){
 
     system("cls");
 
-    //C:\Users\thenasker\Desktop\Exercicio2
     cout << "Escreva a rota onde buscar o arquivo (Ex: C\\)\n" << endl;
     cin >> dir;
-    //DEBUG
-    //dir = "C:\\Users\\thenasker\\Desktop\\Exercicio2";
-    //dir = "C:\\Users\\thenasker\\Downloads";
     list_dir(dir);
-    //Paleta_20170616_194810.ppm
+
     cout << "Escreva o nome do arquivo (Ex: Paleta_20170616_194810.ppm)\n" << endl;
-    //DEBUG
-    //nome = "Aerial.512.ppm";
-    //nome = "Paleta_20170617_003131.ppm";
     cin >> nome;
 
     dir.append("\\");
@@ -438,18 +431,11 @@ bool opcao3(){
 
     system("cls");
 
-    //C:\Users\thenasker\Desktop\Exercicio2
     cout << "Escreva a rota onde buscar o arquivo (Ex: C\\)\n" << endl;
     cin >> dir;
-    //DEBUG
-    //dir = "C:\\Users\\thenasker\\Desktop\\Exercicio2";
-    //dir = "C:\\Users\\thenasker\\Downloads";
     list_dir(dir);
-    //Paleta_20170616_194810.ppm
+
     cout << "Escreva o nome do arquivo (Ex: Paleta_20170616_194810.ppm)\n" << endl;
-    //DEBUG
-    //nome = "Aerial.512.ppm";
-    //nome = "Paleta_20170617_003131.ppm";
     cin >> nome;
 
     dir.append("\\");
@@ -475,18 +461,11 @@ bool opcao4(){
     while(!val){
         system("cls");
 
-        //C:\Users\thenasker\Desktop\Exercicio2
         cout << "Escreva a rota onde buscar o arquivo (Ex: C\\)\n" << endl;
         cin >> dir;
-        //DEBUG
-        //dir = "C:\\Users\\thenasker\\Desktop\\Exercicio2";
-        //dir = "C:\\Users\\thenasker\\Downloads";
+
         list_dir(dir);
-        //Paleta_20170616_194810.ppm
         cout << "Escreva o nome do arquivo (Ex: Paleta_20170616_194810.ppm)\n" << endl;
-        //DEBUG
-        //nome = "Aerial.512.ppm";
-        //nome = "Paleta_20170617_003131.ppm";
         cin >> nome;
 
         dir.append("\\");
@@ -516,18 +495,11 @@ bool opcao5(){
 
     system("cls");
 
-    //C:\Users\thenasker\Desktop\Exercicio2
     cout << "Escreva a rota onde buscar o arquivo (Ex: C\\)\n" << endl;
     cin >> dir;
-    //DEBUG
-    //dir = "C:\\Users\\thenasker\\Desktop\\Exercicio2";
-    //dir = "C:\\Users\\thenasker\\Downloads";
     list_dir(dir);
-    //Paleta_20170616_194810.ppm
+
     cout << "Escreva o nome do arquivo (Ex: Paleta_20170616_194810.ppm)\n" << endl;
-    //DEBUG
-    //nome = "Cripto_20170618_031640.ppm";
-    //nome = "Paleta_20170617_003131.ppm";
     cin >> nome;
 
     dir.append("\\");
